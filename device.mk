@@ -20,7 +20,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 include $(LOCAL_PATH)/configs/props/vendor_logtags.mk
 
 # API
-PRODUCT_SHIPPING_API_LEVEL := 30
+# PRODUCT_SHIPPING_API_LEVEL := 30
 
 # Dynamic Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
@@ -82,7 +82,7 @@ PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/audio/,$(TARGET_COPY_OUT_VENDOR)/etc)
 
 PRODUCT_COPY_FILES += \
-    frameworks/av/services/audiopolicy/config/bluetooth_audio_policy_configuration_7_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_audio_policy_configuration.xml \
+   # frameworks/av/services/audiopolicy/config/bluetooth_audio_policy_configuration_7_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_audio_policy_configuration.xml \
     frameworks/av/services/audiopolicy/config/r_submix_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/r_submix_audio_policy_configuration.xml
 
 # Bluetooth
@@ -95,12 +95,12 @@ PRODUCT_PACKAGES += \
     libbluetooth_audio_session
 
 # Boot Control
-PRODUCT_PACKAGES += \
-    android.hardware.boot@1.2-service
+# PRODUCT_PACKAGES += \
+   # android.hardware.boot@1.2-service
 
-PRODUCT_PACKAGES += \
-    android.hardware.boot@1.2-mtkimpl \
-    android.hardware.boot@1.2-mtkimpl.recovery
+# PRODUCT_PACKAGES += \
+   # android.hardware.boot@1.2-mtkimpl \
+   # android.hardware.boot@1.2-mtkimpl.recovery
 
 PRODUCT_PACKAGES += \
     libmtk_bsg \
@@ -118,8 +118,8 @@ PRODUCT_PACKAGES += \
     Aperture
 
 # CAS
-PRODUCT_PACKAGES += \
-    android.hardware.cas@1.2-service-lazy
+# PRODUCT_PACKAGES += \
+   # android.hardware.cas@1.2-service-lazy
 
 # Certs
 PRODUCT_COPY_FILES += \
@@ -139,12 +139,12 @@ PRODUCT_PACKAGES += \
     android.hardware.dumpstate@1.1.vendor:64
 
 # Display
-PRODUCT_PACKAGES += \
-    android.hardware.graphics.composer@2.1-service \
-    android.hardware.graphics.composer@2.1-resources.vendor:64 \
-    android.hardware.graphics.composer@2.1.vendor:64 \
-    android.hardware.memtrack@1.0-service \
-    android.hardware.memtrack@1.0-impl \
+# PRODUCT_PACKAGES += \
+  #  android.hardware.graphics.composer@2.1-service \
+   # android.hardware.graphics.composer@2.1-resources.vendor:64 \
+    # android.hardware.graphics.composer@2.1.vendor:64 \
+   # android.hardware.memtrack@1.0-service \
+   # android.hardware.memtrack@1.0-impl \
     libdrm.vendor
 
 # Fastbootd
@@ -157,9 +157,9 @@ PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.3-service.xiaomi
 
 # Gatekeeper
-PRODUCT_PACKAGES += \
-    android.hardware.gatekeeper@1.0-service \
-    android.hardware.gatekeeper@1.0-impl
+# PRODUCT_PACKAGES += \
+   # android.hardware.gatekeeper@1.0-service \
+   # android.hardware.gatekeeper@1.0-impl
 
 # GPS
 PRODUCT_PACKAGES += \
@@ -171,17 +171,17 @@ PRODUCT_PACKAGES += \
     android.hardware.gnss@2.1.vendor:64
 
 # Health
-PRODUCT_PACKAGES += \
-    android.hardware.health@2.1-service \
-    android.hardware.health@2.1-impl \
-    android.hardware.health@2.1-impl.recovery
+# PRODUCT_PACKAGES += \
+   # android.hardware.health@2.1-service \
+   # android.hardware.health@2.1-impl \
+   # android.hardware.health@2.1-impl.recovery
 
 # HIDL
-PRODUCT_PACKAGES += \
-    libhidltransport \
-    libhidltransport.vendor \
-    libhwbinder \
-    libhwbinder.vendor
+# PRODUCT_PACKAGES += \
+    # libhidltransport \
+   # libhidltransport.vendor \
+   # libhwbinder \
+    # libhwbinder.vendor
 
 # HotwordEnrollment
 PRODUCT_COPY_FILES += \
@@ -215,9 +215,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/keylayout/uinput-goodix.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/uinput-goodix.kl
 
 # IR
-PRODUCT_PACKAGES += \
-    android.hardware.ir@1.0-service \
-    android.hardware.ir@1.0-impl
+
 
 # Kernel
 PRODUCT_COPY_FILES += \
@@ -239,8 +237,8 @@ PRODUCT_PACKAGES += \
     android.hardware.light-service.everpal
 
 # Media
-PRODUCT_PACKAGES += \
-    android.hardware.media.omx@1.0-service
+# PRODUCT_PACKAGES += \
+  #  android.hardware.media.omx@1.0-service
 
 PRODUCT_PACKAGES += \
     android.hardware.media.c2@1.2.vendor \
@@ -259,16 +257,16 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_audio.xml \
-    frameworks/av/media/libstagefright/data/media_codecs_google_video_le.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_video_le.xml
+   # frameworks/av/media/libstagefright/data/media_codecs_google_video_le.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_video_le.xml
 
 # Mlipay
 PRODUCT_PACKAGES += \
     vendor.xiaomi.hardware.mlipay@1.1.vendor
 
 # Neural Networks
-PRODUCT_PACKAGES += \
+ PRODUCT_PACKAGES += \
     libruy \
-    android.hardware.neuralnetworks@1.3.vendor:64
+   # android.hardware.neuralnetworks@1.3.vendor:64
 
 # NFC
 PRODUCT_COPY_FILES += \
@@ -295,7 +293,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.front.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.front.xml \
     frameworks/native/data/etc/android.hardware.camera.full.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.full.xml \
     frameworks/native/data/etc/android.hardware.camera.raw.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.raw.xml \
-    frameworks/native/data/etc/android.hardware.consumerir.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.consumerir.xml \
+    # frameworks/native/data/etc/android.hardware.consumerir.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.consumerir.xml \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml \
     frameworks/native/data/etc/android.hardware.location.gps.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.location.gps.xml \
     frameworks/native/data/etc/android.hardware.opengles.aep.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.opengles.aep.xml \
@@ -315,7 +313,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.usb.host.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.usb.host.xml \
     frameworks/native/data/etc/android.hardware.vulkan.compute-0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.vulkan.compute-0.xml \
     frameworks/native/data/etc/android.hardware.vulkan.level-1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.vulkan.level-1.xml \
-    frameworks/native/data/etc/android.hardware.vulkan.version-1_1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.vulkan.version-1_1.xml \
+   # frameworks/native/data/etc/android.hardware.vulkan.version-1_1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.vulkan.version-1_1.xml \
     frameworks/native/data/etc/android.hardware.wifi.direct.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.direct.xml \
     frameworks/native/data/etc/android.hardware.wifi.passpoint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.passpoint.xml \
     frameworks/native/data/etc/android.hardware.wifi.rtt.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.rtt.xml \
@@ -323,7 +321,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.device_id_attestation.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.device_id_attestation.xml \
     frameworks/native/data/etc/android.software.ipsec_tunnels.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.ipsec_tunnels.xml \
     frameworks/native/data/etc/android.software.midi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.midi.xml \
-    frameworks/native/data/etc/android.software.sip.voip.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.sip.voip.xml \
+   # frameworks/native/data/etc/android.software.sip.voip.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.sip.voip.xml \
     frameworks/native/data/etc/android.software.verified_boot.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.verified_boot.xml
 
 # Power
