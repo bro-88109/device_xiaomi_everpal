@@ -11,7 +11,7 @@ vendor/lib64/libaal_mtk.so
 vendor/lib64/libaalservice.so
 
 # APN
-etc/apns-conf.xml:product/etc/apns-conf.xml
+#etc/apns-conf.xml:product/etc/apns-conf.xml
 
 # Audio
 vendor/lib/libaudioclient_aidl_conversion.so
@@ -30,8 +30,8 @@ vendor/lib/libaudio_param_parser-vnd.so
 # Audio (Hardware)
 vendor/lib/hw/audio.primary.mt6833.so
 vendor/lib/hw/audio.r_submix.mt6833.so
-vendor/lib/vendor.mediatek.hardware.audio@6.1.so
-vendor/lib/vendor.mediatek.hardware.audio@7.1.so
+#vendor/lib/vendor.mediatek.hardware.audio@6.1.so
+#vendor/lib/vendor.mediatek.hardware.audio@7.1.so
 
 # Audio (Configs)
 vendor/etc/audio_param/AudioParamOptions.xml
@@ -263,9 +263,9 @@ vendor/etc/aurisys_param/sixth_param.txt
 vendor/etc/aurisys_param/sixth_param_voip.txt
 
 # Bluetooth
-vendor/bin/hw/android.hardware.bluetooth@1.1-service-mediatek
-vendor/etc/init/android.hardware.bluetooth@1.1-service-mediatek.rc
-vendor/lib/hw/android.hardware.bluetooth@1.1-impl-mediatek.so
+# vendor/bin/hw/android.hardware.bluetooth@1.1-service-mediatek
+# vendor/etc/init/android.hardware.bluetooth@1.1-service-mediatek.rc
+# vendor/lib/hw/android.hardware.bluetooth@1.1-impl-mediatek.so
 vendor/lib/hw/vendor.mediatek.hardware.bluetooth.audio@2.1-impl.so
 vendor/lib/hw/vendor.mediatek.hardware.bluetooth.audio@2.2-impl.so
 vendor/lib/libbluetoothem_mtk.so
@@ -277,7 +277,7 @@ vendor/lib/libbluetooth_relayer.so
 vendor/lib/libbt-vendor.so
 vendor/lib/vendor.mediatek.hardware.bluetooth.audio@2.1.so
 vendor/lib/vendor.mediatek.hardware.bluetooth.audio@2.2.so
-vendor/lib64/hw/android.hardware.bluetooth@1.1-impl-mediatek.so
+# vendor/lib64/hw/android.hardware.bluetooth@1.1-impl-mediatek.so
 vendor/lib64/hw/vendor.mediatek.hardware.bluetooth.audio@2.1-impl.so
 vendor/lib64/hw/vendor.mediatek.hardware.bluetooth.audio@2.2-impl.so
 vendor/lib64/libbluetoothem_mtk.so
@@ -291,12 +291,12 @@ vendor/lib64/vendor.mediatek.hardware.bluetooth.audio@2.1.so
 vendor/lib64/vendor.mediatek.hardware.bluetooth.audio@2.2.so
 
 # Camera
-system_ext/lib/vendor.mediatek.hardware.camera.atms@1.0.so
-system_ext/lib64/vendor.mediatek.hardware.camera.atms@1.0.so
+#system_ext/lib/vendor.mediatek.hardware.camera.atms@1.0.so
+#system_ext/lib64/vendor.mediatek.hardware.camera.atms@1.0.so
 vendor/etc/camera/mibokeh_mt6853_opencl.bin
 vendor/etc/camera/mibokeh_mt6853_parameter.bin
-vendor/lib/hw/vendor.mediatek.hardware.camera.atms@1.0-impl.so
-vendor/lib/hw/vendor.mediatek.hardware.camera.bgservice@1.1-impl.so
+#vendor/lib/hw/vendor.mediatek.hardware.camera.atms@1.0-impl.so
+#vendor/lib/hw/vendor.mediatek.hardware.camera.bgservice@1.1-impl.so
 vendor/lib/libcameracustom_all_sensor_modules.so
 vendor/lib/libCamera_imx355ofilmmipiraw_3rd_Capture.so
 vendor/lib/libCamera_imx355ofilmmipiraw_Color_Capture.so
@@ -796,15 +796,15 @@ vendor/lib64/libSonyIMX386PdafLibraryWrapper.so
 vendor/lib64/libSonyIMX519PdafLibrary.so
 vendor/lib64/libSonyIMX519PdafLibraryWrapper.so
 vendor/lib64/libvidhance.so
-vendor/lib64/vendor.mediatek.hardware.camera.atms@1.0.so
-vendor/lib64/vendor.mediatek.hardware.camera.bgservice@1.0.so
-vendor/lib64/vendor.mediatek.hardware.camera.bgservice@1.1.so
-vendor/lib64/vendor.mediatek.hardware.camera.ccap@1.0.so
-vendor/lib64/vendor.mediatek.hardware.camera.frhandler@1.0.so
-vendor/lib64/vendor.mediatek.hardware.camera.isphal@1.0.so
-vendor/lib64/vendor.mediatek.hardware.camera.lomoeffect@1.0.so
-vendor/lib64/vendor.mediatek.hardware.camera.postproc@1.0.so
-vendor/lib64/vendor.mediatek.hardware.camera.security@1.0.so
+#vendor/lib64/vendor.mediatek.hardware.camera.atms@1.0.so
+#vendor/lib64/vendor.mediatek.hardware.camera.bgservice@1.0.so
+#vendor/lib64/vendor.mediatek.hardware.camera.bgservice@1.1.so
+#vendor/lib64/vendor.mediatek.hardware.camera.ccap@1.0.so
+#vendor/lib64/vendor.mediatek.hardware.camera.frhandler@1.0.so
+#vendor/lib64/vendor.mediatek.hardware.camera.isphal@1.0.so
+#vendor/lib64/vendor.mediatek.hardware.camera.lomoeffect@1.0.so
+#vendor/lib64/vendor.mediatek.hardware.camera.postproc@1.0.so
+#vendor/lib64/vendor.mediatek.hardware.camera.security@1.0.so
 
 # Camera (Arcsoft)
 vendor/lib64/libarcsoft_beautyshot.so
@@ -834,20 +834,20 @@ vendor/etc/camera/vidhance_calibration
 vendor/odm/etc/camera/camerabooster.json:odm/etc/camera/camerabooster.json
 
 # Charger
-bin/charger:bin/chargeonlymode
+# bin/charger:bin/chargeonlymode
 
 # Consumerir
-vendor/lib/hw/consumerir.common.so
-vendor/lib64/hw/consumerir.common.so
+# vendor/lib/hw/consumerir.common.so
+# vendor/lib64/hw/consumerir.common.so
 
 # DRM
 vendor/lib/liboemcrypto.so
 vendor/lib64/liboemcrypto.so
 
 # DRM (Hardware)
-vendor/bin/hw/android.hardware.drm@1.4-service.widevine
-vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc
--vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.4-service.widevine.xml
+# vendor/bin/hw/android.hardware.drm@1.4-service.widevine
+#vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc
+#-vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.4-service.widevine.xml
 
 # DRM (Widevine)
 vendor/lib/libwvhidl.so
@@ -857,25 +857,25 @@ vendor/lib64/mediadrm/libwvdrmengine.so
 
 # Display (Hardware)
 vendor/bin/hw/android.hardware.graphics.allocator@4.0-service-mediatek
-vendor/bin/hw/vendor.xiaomi.hardware.displayfeature@1.0-service
+# vendor/bin/hw/vendor.xiaomi.hardware.displayfeature@1.0-service
 vendor/etc/init/android.hardware.graphics.allocator@4.0-service-mediatek.rc
-vendor/etc/init/vendor.xiaomi.hardware.displayfeature@1.0-service.rc
+# vendor/etc/init/vendor.xiaomi.hardware.displayfeature@1.0-service.rc
 vendor/lib/hw/android.hardware.graphics.allocator@4.0-impl-mediatek.so
 vendor/lib/hw/android.hardware.graphics.mapper@4.0-impl-mediatek.so
 vendor/lib/hw/gralloc.default.so
-vendor/lib/hw/memtrack.default.so
-vendor/lib/hw/vendor.xiaomi.hardware.displayfeature@1.0-impl.so
+# vendor/lib/hw/memtrack.default.so
+#vendor/lib/hw/vendor.xiaomi.hardware.displayfeature@1.0-impl.so
 vendor/lib/vendor.xiaomi.hardware.displayfeature@1.0.so
 vendor/lib64/hw/android.hardware.graphics.allocator@4.0-impl-mediatek.so
 vendor/lib64/hw/android.hardware.graphics.mapper@4.0-impl-mediatek.so
 vendor/lib64/hw/gralloc.default.so
 vendor/lib64/hw/hwcomposer.mt6833.so
-vendor/lib64/hw/memtrack.default.so
-vendor/lib64/hw/vendor.xiaomi.hardware.displayfeature@1.0-impl.so
+#vendor/lib64/hw/memtrack.default.so
+#vendor/lib64/hw/vendor.xiaomi.hardware.displayfeature@1.0-impl.so
 vendor/lib64/vendor.xiaomi.hardware.displayfeature@1.0.so
 
 # Engineer Mode
--app/LocationEM2/LocationEM2.apk
+#-app/LocationEM2/LocationEM2.apk
 lib/libaudio_param_parser-sys.so
 lib/libaudioutilmtk.so
 lib/libem_aoltest_jni.so
@@ -885,33 +885,26 @@ lib/libem_wifi_jni.so
 lib64/libaudio_param_parser-sys.so
 lib64/libaudioutilmtk.so
 lib64/libem_aoltest_jni.so
-lib64/libem_audio_jni.so
+#lib64/libem_audio_jni.so
 lib64/libem_audio_jni.so
 lib64/libem_support_jni.so
 lib64/libem_usb_jni.so
 lib64/libem_wifi_jni.so
--priv-app/EngineerMode/EngineerMode.apk
--priv-app/YGPS/YGPS.apk
-system_ext/lib/libaudiotoolkit.so
-system_ext/lib64/libaudiotoolkit.so
+#-priv-app/EngineerMode/EngineerMode.apk
+#-priv-app/YGPS/YGPS.apk
+#system_ext/lib/libaudiotoolkit.so
+#system_ext/lib64/libaudiotoolkit.so
 vendor/lib64/libaudiotoolkit_vendor.so
 
 # Fido
-vendor/bin/fidoca
-vendor/etc/init/vendor.xiaomi.hardware.mfidoca@1.0-service.rc
--vendor/etc/vintf/manifest/manifest_vendor.xiaomi.hardware.mfidoca.xml
-vendor/lib/libmfido.so
-vendor/lib/vendor.xiaomi.hardware.mfidoca@1.0.so
-vendor/lib64/libmfido.so
-vendor/lib64/vendor.xiaomi.hardware.mfidoca@1.0.so
 
 # Fingerprint
 vendor/etc/permissions/com.fingerprints.extension.xml
 vendor/etc/permissions/com.fingerprints.fpmmi.xml
 vendor/firmware/168_fingerprintRecord_RTP.bin
 vendor/firmware/fingerprint_record_rtp.bin
--vendor/framework/com.fingerprints.extension.jar
--vendor/framework/com.fingerprints.fpmmi.jar
+#-vendor/framework/com.fingerprints.extension.jar
+#-vendor/framework/com.fingerprints.fpmmi.jar
 vendor/lib64/com.fingerprints.extension@1.0.so
 -vendor/lib64/hw/fingerprint.fpc.so:vendor/lib64/hw/fingerprint.fpc.default.so
 -vendor/lib64/hw/fingerprint.goodix.so:vendor/lib64/hw/fingerprint.goodix.default.so
@@ -919,7 +912,7 @@ vendor/lib64/libgf_ca.so
 vendor/lib64/libgf_hal.so
 vendor/lib64/libgoodixhwfingerprint.so
 vendor/lib64/libvendor.goodix.hardware.biometrics.fingerprint@2.1.so
-vendor/lib64/vendor.xiaomi.hardware.fingerprintextension@1.0.so
+#vendor/lib64/vendor.xiaomi.hardware.fingerprintextension@1.0.so
 
 # Firmware
 vendor/etc/firmware/novatek_ts_ct_fw.bin
