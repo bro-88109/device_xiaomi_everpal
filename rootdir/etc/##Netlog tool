@@ -942,23 +942,23 @@ on boot
 
 ##Netlog tool
    #change permissions about terminal
-    chown root radio /proc/net/vlan/config
-    chmod 0640 /proc/net/vlan/config
-    chown root radio /proc/net/ip6_tables_matches
-    chown root radio /proc/net/ip6_tables_names
-    chown root radio /proc/net/ip6_tables_targets
-    chown root radio /proc/net/arp_tables_targets
-    chown root radio /proc/net/arp_tables_matches
-    chown root radio /proc/net/arp_tables_names
-    chown root radio /proc/net/ip_tables_targets
-    chown root radio /proc/net/ip_tables_matches
-    chown root radio /proc/net/ip_tables_names
-    chown root radio /proc/net/ip_conntrack_expect
-    chown root radio /proc/net/ip_conntrack
-    chown root radio /proc/net/nf_conntrack
-    chown root radio /proc/net/nf_conntrack_expect
-    chown root radio /proc/net/netfilter/nfnetlink_log
-    chown root radio /proc/net/netfilter/nfnetlink_queue
+    #chown root radio /proc/net/vlan/config
+    #chmod 0640 /proc/net/vlan/config
+    #chown root radio /proc/net/ip6_tables_matches
+    #chown root radio /proc/net/ip6_tables_names
+    #chown root radio /proc/net/ip6_tables_targets
+    #chown root radio /proc/net/arp_tables_targets
+    #chown root radio /proc/net/arp_tables_matches
+    #chown root radio /proc/net/arp_tables_names
+    #chown root radio /proc/net/ip_tables_targets
+    #chown root radio /proc/net/ip_tables_matches
+    #chown root radio /proc/net/ip_tables_names
+    #chown root radio /proc/net/ip_conntrack_expect
+    #chown root radio /proc/net/ip_conntrack
+    #chown root radio /proc/net/nf_conntrack
+    #chown root radio /proc/net/nf_conntrack_expect
+    #chown root radio /proc/net/netfilter/nfnetlink_log
+    #chown root radio /proc/net/netfilter/nfnetlink_queue
 
 # WMT proc
     chown shell system /proc/driver/wmt_dbg
@@ -983,28 +983,28 @@ on boot
 on property:vendor.fps_hal.restartimes=max
     stop vendor.fps_hal
 
-on property:vold.decrypt=trigger_reset_main
-    write /proc/bootprof "INIT:vold.decrypt=trigger_reset_main"
-    setprop sys.boot_completed 0
-    setprop dev.bootcomplete 0
+#on property:vold.decrypt=trigger_reset_main
+ #   write /proc/bootprof "INIT:vold.decrypt=trigger_reset_main"
+ #  setprop sys.boot_completed 0
+ #   setprop dev.bootcomplete 0
 
-on property:vold.decrypt=trigger_post_fs_data
-    write /proc/bootprof "INIT:vold.decrypt=trigger_post_fs_data"
+#on property:vold.decrypt=trigger_post_fs_data
+ #   write /proc/bootprof "INIT:vold.decrypt=trigger_post_fs_data"
 
-on property:vold.decrypt=trigger_restart_min_framework
-    write /proc/bootprof "INIT:vold.decrypt=trigger_restart_min_framework"
-    start msensord
-    start permission_check
+#on property:vold.decrypt=trigger_restart_min_framework
+ #   write /proc/bootprof "INIT:vold.decrypt=trigger_restart_min_framework"
+ #   start msensord
+ #   start permission_check
 
-on property:vold.decrypt=trigger_restart_framework
-    write /proc/bootprof "INIT:vold.decrypt=trigger_restart_framework"
-    start msensord
-    start permission_check
+#on property:vold.decrypt=trigger_restart_framework
+ #   write /proc/bootprof "INIT:vold.decrypt=trigger_restart_framework"
+ #   start msensord
+ #   start permission_check
 
-on property:vold.decrypt=trigger_shutdown_framework
-    write /proc/bootprof "INIT:vold.decrypt=trigger_shutdown_framework"
-    setprop sys.boot_completed 0
-    setprop dev.bootcomplete 0
+#on property:vold.decrypt=trigger_shutdown_framework
+ #   write /proc/bootprof "INIT:vold.decrypt=trigger_shutdown_framework"
+  #  setprop sys.boot_completed 0
+  #  setprop dev.bootcomplete 0
 
 ## mtk printk uart controller
 on property:persist.vendor.uartconsole.enable=*
@@ -1012,8 +1012,8 @@ on property:persist.vendor.uartconsole.enable=*
 
 #+ExtR HONGMI-121738,jiyanan.wt,Add,20220114,set sar function
 #WiFi add sar parameter K16B GL
-on property:vendor.sysctl.tx=5
-      exec - root -- /system/bin/iwpriv wlan0 driver "SET_PWR_CTRL MySar 5"
+#on property:vendor.sysctl.tx=5
+ #     exec - root -- /system/bin/iwpriv wlan0 driver "SET_PWR_CTRL MySar 5"
 #-ExtR HONGMI-121738,jiyanan.wt,Add,20220114,set sar function
 
 #+ExtB HONGMI-85945,liupeng.wt.Add,20210624 添加WIFI降SAR功能
@@ -1026,16 +1026,16 @@ on property:vendor.sysctl.tx=3
     exec - root -- /system/bin/iwpriv wlan0 driver "SET_PWR_CTRL MySar 3"
 
 #WiFi add sar parameter JP
-on property:vendor.sysctl.tx=2
-    exec - root -- /system/bin/iwpriv wlan0 driver "SET_PWR_CTRL MySar 2"
+#on property:vendor.sysctl.tx=2
+#    exec - root -- /system/bin/iwpriv wlan0 driver "SET_PWR_CTRL MySar 2"
 
 #WiFi add sar parameter CN
-on property:vendor.sysctl.tx=1
-    exec - root -- /system/bin/iwpriv wlan0 driver "SET_PWR_CTRL MySar 1"
+#on property:vendor.sysctl.tx=1
+ #   exec - root -- /system/bin/iwpriv wlan0 driver "SET_PWR_CTRL MySar 1"
 
 #WiFi restore sar parameter
-on property:vendor.sysctl.tx=0
-    exec - root -- /system/bin/iwpriv wlan0 driver "SET_PWR_CTRL MySar 0"
+#on property:vendor.sysctl.tx=0
+ #   exec - root -- /system/bin/iwpriv wlan0 driver "SET_PWR_CTRL MySar 0"
 #-ExtB HONGMI-85945,liupeng.wt.Add,20210624 添加WIFI降SAR功能
 
 # bugreport is triggered by holding down volume down, volume up and power
@@ -1067,12 +1067,12 @@ on property:sys.boot_completed=1
 
     write /sys/devices/system/cpu/eas/enable 2
     write /proc/cpufreq/cpufreq_sched_disable 0
-    chown system system /dev/stune/foreground/schedtune.prefer_idle
-    chown system system /dev/stune/top-app/schedtune.prefer_idle
-    chown system system /dev/stune/rt/schedtune.prefer_idle
-    write /dev/stune/foreground/schedtune.prefer_idle 0
-    write /dev/stune/top-app/schedtune.prefer_idle 0
-    write /dev/stune/rt/schedtune.prefer_idle 0
+  #  chown system system /dev/stune/foreground/schedtune.prefer_idle
+   # chown system system /dev/stune/top-app/schedtune.prefer_idle
+   # chown system system /dev/stune/rt/schedtune.prefer_idle
+   # write /dev/stune/foreground/schedtune.prefer_idle 0
+   # write /dev/stune/top-app/schedtune.prefer_idle 0
+   # write /dev/stune/rt/schedtune.prefer_idle 0
     write /proc/sys/kernel/sched_migration_cost_ns 200000
 
     # restore perf. parameters
@@ -1144,7 +1144,7 @@ on property:persist.vendor.mediatek.fg.force25c=0
 on property:persist.vendor.mediatek.fg.log.enable=1
     write /sys/devices/platform/battery_meter/FG_daemon_log_level 7
     write /sys/bus/platform/devices/battery/FG_daemon_log_level 7
-    write /proc/sys/kernel/printk 8
+    #write /proc/sys/kernel/printk 8
 
 # add meta_tst for ATM
 service meta_tst /vendor/bin/meta_tst
@@ -1169,8 +1169,8 @@ on property:vendor.mtk.md1.status=reset
     setprop persist.vendor.atm.mdmode normal
 
 # FPSGO FBT Game
-on boot
-    insmod /vendor/lib/modules/fpsgo.ko
+# on boot
+   # insmod /vendor/lib/modules/fpsgo.ko
 
     chown system system /sys/class/thermal/thermal_message/sconfig
 
@@ -1187,7 +1187,7 @@ service osi /system/bin/osi
     oneshot
     #seclabel u:r:osi:s0
 
-service mi_thermald /system/vendor/bin/mi_thermald
+service mi_thermald /vendor/bin/mi_thermald
     class main
     user root
     group system
