@@ -16,7 +16,6 @@ AB_OTA_PARTITIONS := \
     product \
     system_ext \
     odm \
-    vendor_dlkm \
     vbmeta \
     vbmeta_system \
     vbmeta_vendor
@@ -50,7 +49,7 @@ BOARD_AVB_VBMETA_SYSTEM_ALGORITHM := SHA256_RSA4096
 BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX := $(PLATFORM_SECURITY_PATCH_TIMESTAMP)
 BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX_LOCATION := 2
 
-BOARD_AVB_VBMETA_VENDOR := vendor vendor_dlkm odm
+BOARD_AVB_VBMETA_VENDOR := vendor odm
 BOARD_AVB_VBMETA_VENDOR_KEY_PATH := external/avb/test/data/testkey_rsa4096.pem
 BOARD_AVB_VBMETA_VENDOR_ALGORITHM := SHA256_RSA4096
 BOARD_AVB_VBMETA_VENDOR_ROLLBACK_INDEX := 0
@@ -100,8 +99,8 @@ BOARD_PREBUILT_DTBIMAGE_DIR := $(DEVICE_PATH)-kernel/dtb
 BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)-kernel/dtbo.img
 BOARD_VENDOR_KERNEL_MODULES := $(wildcard $(DEVICE_PATH)-kernel/vendor-modules/*.ko)
 
-TARGET_KERNEL_SOURCE := $(DEVICE_PATH)-kernel/kernel-headers
-TARGET_NO_KERNEL_OVERRIDE := true
+TARGET_KERNEL_SOURCE := kernel/xiaomi/everpal
+# TARGET_NO_KERNEL_OVERRIDE := true
 
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset $(BOARD_RAMDISK_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --tags_offset $(BOARD_KERNEL_TAGS_OFFSET)
@@ -135,7 +134,6 @@ BOARD_XIAOMI_DYNAMIC_PARTITIONS_PARTITION_LIST := \
     product \
     system_ext \
     odm \
-    vendor_dlkm
 BOARD_XIAOMI_DYNAMIC_PARTITIONS_SIZE := 9122611200
 
 BOARD_SYSTEMIMAGE_FILE_SYSTEM_TYPE := ext4
@@ -174,7 +172,7 @@ TARGET_COPY_OUT_VENDOR := vendor
 TARGET_COPY_OUT_PRODUCT := product
 TARGET_COPY_OUT_SYSTEM_EXT := system_ext
 TARGET_COPY_OUT_ODM := odm
-TARGET_COPY_OUT_VENDOR_DLKM := vendor_dlkm
+# TARGET_COPY_OUT_VENDOR_DLKM := vendor_dlkm
 
 # Vendor Security Patch
 VENDOR_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
@@ -185,7 +183,7 @@ DEVICE_MATRIX_FILE := $(DEVICE_PATH)/compatibility_matrix.xml
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := $(DEVICE_PATH)/framework_compatibility_matrix.xml
 
 # VNDK
-BOARD_VNDK_VERSION := current
+# BOARD_VNDK_VERSION := current
 
 # WiFi
 WPA_SUPPLICANT_VERSION := VER_0_8_X
@@ -193,14 +191,15 @@ BOARD_HOSTAPD_DRIVER := NL80211
 WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
 WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
 
-TARGET_SPECIFIC_HEADER_PATH := hardware/mediatek/interfaces
 
 # Inherit the proprietary files
 include vendor/xiaomi/everpal/BoardConfigVendor.mk
 
+# Dynamic Partitions Compatibility
+BOARD_MAIN_SYSTEM_INTERFACE_LINKAGE := true
+BOARD_FLATTEN_APEX := true
+
 # Android 16 Bringup Security Workarounds
-BUILD_BROKEN_VENDOR_PROPERTY_NAMESPACE := true
-SELNX_IGNORE_NEVERALLOWS := true
 BOARD_VENDOR_SEPOLICY_DIRS += device/xiaomi/everpal/sepolicy/vendor
 
 
