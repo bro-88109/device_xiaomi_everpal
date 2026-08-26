@@ -293,7 +293,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.front.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.front.xml \
     frameworks/native/data/etc/android.hardware.camera.full.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.full.xml \
     frameworks/native/data/etc/android.hardware.camera.raw.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.raw.xml \
-    # frameworks/native/data/etc/android.hardware.consumerir.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.consumerir.xml \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml \
     frameworks/native/data/etc/android.hardware.location.gps.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.location.gps.xml \
     frameworks/native/data/etc/android.hardware.opengles.aep.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.opengles.aep.xml \
@@ -313,7 +312,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.usb.host.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.usb.host.xml \
     frameworks/native/data/etc/android.hardware.vulkan.compute-0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.vulkan.compute-0.xml \
     frameworks/native/data/etc/android.hardware.vulkan.level-1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.vulkan.level-1.xml \
-    #frameworks/native/data/etc/android.hardware.vulkan.version-1_1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.vulkan.version-1_1.xml \
     frameworks/native/data/etc/android.hardware.wifi.direct.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.direct.xml \
     frameworks/native/data/etc/android.hardware.wifi.passpoint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.passpoint.xml \
     frameworks/native/data/etc/android.hardware.wifi.rtt.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.rtt.xml \
@@ -321,15 +319,14 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.device_id_attestation.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.device_id_attestation.xml \
     frameworks/native/data/etc/android.software.ipsec_tunnels.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.ipsec_tunnels.xml \
     frameworks/native/data/etc/android.software.midi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.midi.xml \
-   #frameworks/native/data/etc/android.software.sip.voip.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.sip.voip.xml \
     frameworks/native/data/etc/android.software.verified_boot.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.verified_boot.xml
 
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power-service-mediatek \
     android.hardware.power-V2-ndk.vendor:64 \
-    android.hardware.power@1.2.vendor:64 \
-    vendor.mediatek.hardware.mtkpower@1.2.vendor
+   # android.hardware.power@1.2.vendor:64 \
+   # vendor.mediatek.hardware.mtkpower@1.2.vendor
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/perf/power_app_cfg.xml:$(TARGET_COPY_OUT_VENDOR)/etc/power_app_cfg.xml \
@@ -341,10 +338,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
 
 # Radio
-PRODUCT_PACKAGES += \
-    android.hardware.radio.config@1.3.vendor:64 \
-    android.hardware.radio@1.1.vendor \
-    android.hardware.radio@1.6.vendor:64
+# PRODUCT_PACKAGES += \
+  #  android.hardware.radio.config@1.3.vendor:64 \
+   # android.hardware.radio@1.1.vendor \
+   # android.hardware.radio@1.6.vendor:64
 
 # Ramdisk
 PRODUCT_PACKAGES += \
@@ -427,13 +424,13 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/xiaomi
 
 # SoundTrigger
-PRODUCT_PACKAGES += \
-    android.hardware.soundtrigger@2.3-impl
+# PRODUCT_PACKAGES += \
+   # android.hardware.soundtrigger@2.3-impl
 
 # Thermal
-PRODUCT_PACKAGES += \
-    android.hardware.thermal@1.0-impl \
-    android.hardware.thermal@2.0.vendor
+# PRODUCT_PACKAGES += \
+   # android.hardware.thermal@1.0-impl \
+   # android.hardware.thermal@2.0.vendor
 
 # USB
 PRODUCT_PACKAGES += \
@@ -448,10 +445,10 @@ PRODUCT_PACKAGES += \
     android.hardware.vibrator-service.everpal
 
 # VNDK
-PRODUCT_PACKAGES += \
-    libcrypto-v32 \
-    libhidlbase-v32 \
-    libutils-v32
+# PRODUCT_PACKAGES += \
+   # libcrypto-v32 \
+   # libhidlbase-v32 \
+   # libutils-v32
 
 # WiFi
 PRODUCT_PACKAGES += \
@@ -460,8 +457,8 @@ PRODUCT_PACKAGES += \
     wpa_supplicant
 
 PRODUCT_PACKAGES += \
-    android.hardware.tetheroffload.config@1.0.vendor:64 \
-    android.hardware.tetheroffload.control@1.1.vendor:64
+   # android.hardware.tetheroffload.config@1.0.vendor:64 \
+   # android.hardware.tetheroffload.control@1.1.vendor:64
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
