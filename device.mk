@@ -49,9 +49,9 @@ PRODUCT_PACKAGES += \
     otapreopt_script
 
 # Audio
-PRODUCT_PACKAGES += \
-    android.hardware.audio.service \
-    android.hardware.audio@7.1-impl:32
+# PRODUCT_PACKAGES += \
+   # android.hardware.audio.service \
+   # android.hardware.audio@7.1-impl:32
 
 PRODUCT_PACKAGES += \
     android.hardware.audio.common-util.vendor \
