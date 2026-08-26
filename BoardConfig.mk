@@ -193,5 +193,14 @@ BOARD_HOSTAPD_DRIVER := NL80211
 WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
 WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
 
+TARGET_SPECIFIC_HEADER_PATH := hardware/mediatek/interfaces
+
 # Inherit the proprietary files
 include vendor/xiaomi/everpal/BoardConfigVendor.mk
+
+# Android 16 Bringup Security Workarounds
+BUILD_BROKEN_VENDOR_PROPERTY_NAMESPACE := true
+SELNX_IGNORE_NEVERALLOWS := true
+BOARD_VENDOR_SEPOLICY_DIRS += device/xiaomi/everpal/sepolicy/vendor
+
+
